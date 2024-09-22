@@ -4,29 +4,106 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marketplace Artesanal - Home</title>
+    <!-- Enlace a Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        /* Hero section - Imagen de fondo que cubre toda la pantalla */
+        .hero {
+            height: 100vh;
+            background-image: url('./images/home-landing.jpg'); /* URL de la imagen de fondo */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero .btn {
+            font-size: 1.2rem;
+            padding: 10px 20px;
+            margin: 5px;
+        }
+
+        /* Fondo oscuro para el texto */
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1; /* Para que el contenido esté por encima del overlay */
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Marketplace de Productos Artesanales</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="galeria.html">Galería de Productos</a></li>
-                <li><a href="contacto.html">Contáctenos</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <main>
-        <section>
-            <h2>Bienvenidos a Nuestro Marketplace</h2>
-            <p>Explora una variedad de productos artesanales únicos creados con amor y dedicación por artesanos locales. ¡Encuentra el regalo perfecto o algo especial para ti!</p>
-        </section>
-    </main>
+    <!-- Navbar de Bootstrap -->
+    <nav class="navbar navbar-expand-lg bg-primary bg-gradient">
+        <div class="container-fluid">
+            <a class="navbar-brand text-white" href="index.html">Marketplace Artesanal</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active text-white" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="galeria.html">Galería de Productos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="contacto.html">Contáctenos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
 
-    <footer>
+    <!-- Hero section - Landing page -->
+    <section class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Bienvenidos a Nuestro Marketplace Artesanal</h1>
+            <p>Descubre productos únicos creados por artesanos locales, perfectos para regalar o disfrutar.</p>
+            <a href="galeria.html" class="btn btn-primary">Explorar Productos</a>
+            <a href="contacto.html" class="btn btn-outline-light">Contáctanos</a>
+        </div>
+    </section>
+
+    <!-- Contenido adicional si es necesario -->
+    <!-- <main class="container my-5">
+        <section>
+            <h2>Nuestra Misión</h2>
+            <p>Apoyar a los artesanos locales mientras te ofrecemos productos auténticos y de alta calidad.</p>
+        </section>
+    </main> -->
+
+    <!-- Footer -->
+    <footer class="text-center py-3 bg-dark text-white">
         <p>&copy; 2024 Marketplace de Productos Artesanales. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Enlace a Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
